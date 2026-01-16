@@ -1,0 +1,912 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn-primary {
+    background: #15bce9;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: #444;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    background: #f2f8fc;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Features */
+.features-section {
+    padding: 60px 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* CTA */
+.cta-section {
+    background: #eff4ff;
+    color: #005f73;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.btn-large {
+    font-size: 20px;
+}
+
+/* Footer */
+
+
+
+
+
+
+
+
+
+
+/* Pricing */
+.pricing {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.price-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+}
+
+.price {
+    font-size: 22px;
+    color: #005f73;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.price-card li {
+    margin: 10px 0;
+}
+
+.featured {
+    border: 2px solid #15bce9;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+
+/* FAQ */
+.faq {
+    background: #f2f8fc;
+    padding: 60px 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background: #004f73;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.faq-answer {
+    display: none;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+/* Navbar responsive */
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 25px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+
+
+css dashboard .dashboard {
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+.footer {
+    background: #0a1a3a;
+    color: #fff;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+.wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM NAVBAR (LMS PRO)
+========================= */
+
+.premium-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.premium-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.premium-logo span {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Menu Tengah */
+.nav-center {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #374151;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.nav-center a:hover {
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.nav-center a.active {
+    background: rgba(13, 110, 253, 0.15);
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* User Area */
+.nav-right {
+    position: relative;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Avatar */
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #0d6efd, #3b82f6);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.username {
+    font-size: 14px;
+    color: #111827;
+    font-weight: 500;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    display: none;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .premium-navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-center {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menu / Kartu Materi */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.menu-card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    border: 1px solid #ddd;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: #f0f6ff;
+}
+
+.menu-card h3 {
+    color: #0057ff;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 60px;
+}
+
+/* Tombol Akses Materi */
+.menu-card button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-card button:hover {
+    background: #084298;
+    transform: translateY(-3px);
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .menu-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   KELAS CARD (INDEX PAGE)
+========================= */
+
+.kelas-section {
+    padding: 80px 20px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.kelas-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 50px;
+}
+
+/* Container */
+.kelas-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.kelas-card {
+    background: white;
+    width: 300px;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.kelas-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon */
+.kelas-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.kelas-card h3 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.kelas-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    min-height: 60px;
+}
+
+/* Button */
+.kelas-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.kelas-btn:hover {
+    background: #084298;
+}
+
+/* Accent Border (Optional) */
+.kelas-card.dasar {
+    border-top: 5px solid #2563eb;
+}
+
+.kelas-card.menengah {
+    border-top: 5px solid #16a34a;
+}
+
+.kelas-card.intensif {
+    border-top: 5px solid #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .kelas-card {
+        width: 90%;
+    }
+}
+
+.kelas-btn,
+.kelas-card h3,
+.kelas-card p,
+.kelas-icon,
+.kelas-price,
+.rating,
+.progress,
+.countdown {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   KELAS CARD (glow effect)
+========================= */
+.kelas-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(13, 110, 253, 0.15));
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.kelas-card:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM CLASS CARD
+========================= */
+
+.kelas-card.premium {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+/* Gradient Hover */
+.kelas-card.premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(13, 110, 253, 0.15),
+            rgba(99, 102, 241, 0.15));
+    opacity: 0;
+    transition: 0.5s;
+
+    /* 🔥 FIX KLIK */
+    pointer-events: none;
+}
+
+
+.kelas-card.premium:hover::before {
+    opacity: 1;
+}
+
+.kelas-card.premium:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.badge.basic {
+    background: #2563eb;
+}
+
+.badge.popular {
+    background: #16a34a;
+}
+
+.badge.premium-badge {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+/* Price */
+.kelas-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #0d6efd;
+}
+
+/* Locked State */
+.kelas-card.locked {
+    opacity: 0.95;
+}
+
+.lock-icon {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    font-size: 22px;
+    opacity: 0.6;
+}
+
+/* Button Locked */
+.locked-btn {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.locked-btn:hover {
+    background: linear-gradient(135deg, #d97706, #dc2626);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ELITE CLASS CARD
+========================= */
+
+.kelas-card.elite {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 22px;
+    padding: 42px 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.kelas-card.elite:hover {
+    transform: translateY(-14px) scale(1.05);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Elite Glow */
+.kelas-card.elite::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(13, 110, 253, 0.18), transparent);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.kelas-card.elite:hover::after {
+    opacity: 1;
+}
+
+/* Rating */
+.rating {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #f59e0b;
+}
+
+/* Progress */
+.progress {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0d6efd, #3b82f6);
+}
+
+/* Countdown */
+.countdown {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #dc2626;
+    font-weight: 600;
+}
+
+
+
+.kelas-card.unlocked {
+    border: 2px solid #084298;
+}
+
+.kelas-card.unlocked::after {
+    content: "✔ UNLOCKED";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #a7caff;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 700;
+}

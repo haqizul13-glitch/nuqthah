@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuqthah Online Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="premium-navbar">
+        <div class="nav-left">
+            <div class="premium-logo">
+                Nuqthah<span>Learn</span>
+            </div>
+        </div>
+
+        <nav class="nav-center">
+            <a href="index.html" class="active">Beranda</a>
+            <a href="materi.html">Materi</a>
+            <a href="#">Kelas</a>
+            <a href="#">Sertifikat</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-dropdown" onclick="toggleDropdown()">
+                <div class="avatar">N</div>
+                <span class="username">Peserta</span>
+            </div>
+
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#">Dashboard</a>
+                <a href="#">Profil</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Platform Pembelajaran Online</h1>
+            <p>Akses materi, modul, dan tugas pembelajaran secara online.</p>
+            <div class="buttons">
+                <a href="materi.html" class="btn-primary">Akses Materi</a>
+                <a href="register.html" class="btn-primary">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features-section">
+
+        <div class="container grid-3">
+            <div class="card">
+                <h3>Materi pembelajaran</h3>
+                <p>Akses modul dan file pembelajaran</p>
+            </div>
+            <div class="card">
+                <h3>Tugas & Evaluasi</h3>
+                <p>Kumpulkan tugas dan evaluasi secara online</p>
+            </div>
+           <div class="card">
+                <h3>Absensi</h3>
+                <p>Isi kehadiran melalui Google Form</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="kelas-section elite">
+        <h2 class="kelas-title">Program Kelas Elite</h2>
+
+        <div class="kelas-container">
+
+            <!-- KELAS DASAR -->
+            <div class="kelas-card elite unlocked">
+                <span class="badge elite-badge">Elite</span>
+
+                <div class="kelas-icon">📘</div>
+                <h3>Kelas Dasar</h3>
+
+                <div class="rating">⭐⭐⭐⭐☆ (4.5)</div>
+
+                <p>Materi pengantar lengkap dan latihan terstruktur.</p>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <small>Progress belajar: 80%</small>
+
+                <div class="kelas-price">Rp 99.000</div>
+
+                <a href="materi.html" class="kelas-btn">Lanjutkan</a>
+            </div>
+
+            <!-- KELAS MENENGAH -->
+            <div class="kelas-card elite unlocked">
+                <span class="badge popular">Terlaris</span>
+
+                <div class="kelas-icon">📗</div>
+                <h3>Kelas Menengah</h3>
+
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+
+                <p>Materi lanjutan + studi kasus.</p>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 45%"></div>
+                </div>
+                <small>Progress belajar: 45%</small>
+
+                <div class="kelas-price">Rp 199.000</div>
+
+                <a href="materi.html" class="kelas-btn">Lanjutkan</a>
+            </div>
+
+            <!-- KELAS INTENSIF -->
+           <div class="kelas-card elite locked" id="eliteCard">
+    <span class="badge premium-badge">Elite</span>
+
+    <div class="kelas-icon">📕</div>
+    <h3>Kelas Intensif</h3>
+
+    <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+    <p>Bimbingan personal + sertifikat resmi.</p>
+
+    <div class="kelas-price">Rp 399.000</div>
+
+    <button class="kelas-btn locked-btn" id="unlockEliteBtn">
+        Unlock Sekarang
+    </button>
+
+    <div class="lock-icon">🔒</div>
+</div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Apa Kata Peserta</h2>
+            <div class="grid-3">
+                <div class="testimonial-card">
+                    <p>“Materinya mudah dipahami dan sangat membantu belajar mandiri.”</p>
+                    <strong>— Syalabi, Peserta Kelas Dasar</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Penjelasan singkat, jelas, dan langsung ke inti pembahasan.”</p>
+                    <strong>— Alfian, Peserta Kelas Menengah</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Saya jadi lebih paham materi yang sebelumnya sulit.”</p>
+                    <strong>— Faishol, Peserta Kelas Intensif</strong>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Pertanyaan Umum</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah bisa coba gratis?</button>
+                <div class="faq-answer">Ya, gratis 30 hari tanpa kartu kredit.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah data aman?</button>
+                <div class="faq-answer">Data disimpan di server cloud dengan enkripsi.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Bisa diakses dari HP?</button>
+                <div class="faq-answer">Bisa, responsive di semua perangkat.</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- CTA -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <h2>Mulai dengan Nuqthah Online Sekarang!</h2>
+            <a href="#" class="btn-primary btn-large">Daftar &amp; Coba Gratis</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Login</h2>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="btn-primary">Masuk</button>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Daftar Akun</h2>
+            <input type="text" placeholder="Nama">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="btn-primary">Daftar</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Nuqthah Online Learning</h3>
+                <p>Platform pembelajaran online untuk belajar mandiri dan terstruktur.</p>
+            </div>
+
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#paket">Paket Pembelajaran</a></li>
+                    <li><a href="materi.html">Materi</a></li>
+                    <li><a href="#jadwal">Jadwal Kelas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Kontak</h4>
+                <p>WhatsApp Admin</p>
+                <button onclick="openWhatsApp()" class="btn-primary">
+                    Chat Admin
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Nuqthah Learning Center. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="wa-float" onclick="openWhatsApp()">💬</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

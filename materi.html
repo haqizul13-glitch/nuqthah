@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Materi Pembelajaran</title>
+    <link rel="stylesheet" href="materi.css">
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eliteUnlocked = localStorage.getItem("eliteUnlocked");
+
+            if (eliteUnlocked !== "true") {
+                alert("Akses ditolak! Silakan unlock kelas Elite terlebih dahulu.");
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+
+    <!-- NAVBAR (SAMA SEPERTI INDEX) -->
+    <header class="premium-navbar">
+        <div class="nav-left">
+            <div class="premium-logo">
+                Nuqthah<span>Learn</span>
+            </div>
+        </div>
+
+        <nav class="nav-center">
+            <a href="index.html">Beranda</a>
+            <a href="materi.html" class="active">Materi</a>
+            <a href="#">Kelas</a>
+            <a href="#">Sertifikat</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-dropdown" onclick="toggleDropdown()">
+                <div class="avatar">N</div>
+                <span class="username">Peserta</span>
+            </div>
+
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#">Dashboard</a>
+                <a href="#">Profil</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Materi Pembelajaran Online</h1>
+        <p>Pilih materi sesuai kelas, klik untuk mengakses Google Drive atau Google Form.</p>
+    </section>
+
+    <section class="filter">
+        <button onclick="showAll()">Semua</button>
+        <button onclick="showClass('dasar')">Kelas Dasar</button>
+        <button onclick="showClass('menengah')">Kelas Menengah</button>
+        <button onclick="showClass('intensif')">Kelas Intensif</button>
+    </section>
+
+    <section class="menu">
+        <div class="menu-card dasar" onclick="openMateriDasar()">
+            <h3>📘 Kelas Dasar</h3>
+            <p>Materi pengantar & PDF</p>
+            <button>Akses Materi</button>
+        </div>
+
+        <div class="menu-card menengah" onclick="openMateriMenengah()">
+            <h3>📗 Kelas Menengah</h3>
+            <p>Materi lanjutan & tugas</p>
+            <button>Akses Materi</button>
+        </div>
+
+        <div class="menu-card intensif" onclick="openMateriIntensif()">
+            <h3>📕 Kelas Intensif</h3>
+            <p>Bimbingan & sertifikat</p>
+            <button>Akses Materi</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Nuqthah Online Learning</h3>
+                <p>Platform pembelajaran online untuk belajar mandiri dan terstruktur.</p>
+            </div>
+
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#paket">Paket Pembelajaran</a></li>
+                    <li><a href="materi.html">Materi</a></li>
+                    <li><a href="#jadwal">Jadwal Kelas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Kontak</h4>
+                <p>WhatsApp Admin</p>
+                <button onclick="openWhatsApp()" class="btn-primary">
+                    Chat Admin
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Nuqthah Learning Center. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="wa-float" onclick="openWhatsApp()">💬</div>
+
+    <script>
+        // Proteksi halaman materi
+        window.onload = function () {
+            const savedUser = localStorage.getItem("username");
+            const savedPass = localStorage.getItem("password");
+
+            if (!savedUser || !savedPass) {
+                // Kalau tidak ada akun tersimpan → redirect ke login
+                alert("Silakan login terlebih dahulu untuk mengakses materi.");
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+
+    <script src="materi.js"></script>
+</body>
+
+</html>
