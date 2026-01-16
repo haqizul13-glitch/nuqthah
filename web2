@@ -1,0 +1,2467 @@
+function openMateriDasar() {
+    window.open(
+        "https://drive.google.com/drive/folders/LINK_MATERI_DASAR",
+        "_blank"
+    );
+}
+
+function openMateriMenengah() {
+    window.open(
+        "https://drive.google.com/drive/folders/LINK_MATERI_MENENGAH",
+        "_blank"
+    );
+}
+
+function openMateriIntensif() {
+    window.open(
+        "https://drive.google.com/drive/folders/LINK_MATERI_INTENSIF",
+        "_blank"
+    );
+}
+
+function openFormmateri() {
+    window.open(
+        "https://forms.gle/m4AUwud2YiRUCXiM8",
+        "_blank"
+    );
+}
+
+
+function showAll() {
+    document.querySelectorAll('.menu-card').forEach(card => {
+        card.style.display = 'block';
+    });
+}
+
+function showClass(className) {
+    document.querySelectorAll('.menu-card').forEach(card => {
+        if (card.classList.contains(className)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+
+
+
+function toggleDropdown() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+// Tutup dropdown saat klik luar
+document.addEventListener("click", function (e) {
+    const dropdown = document.querySelector(".nav-right");
+    if (!dropdown.contains(e.target)) {
+        document.getElementById("dropdownMenu").style.display = "none";
+    }
+});
+
+
+
+
+
+function openWhatsApp() {
+    window.open(
+        "https://wa.me/6285185409887",
+        "_blank"
+    );
+}
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Peserta</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #f0f6ff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #084298;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Daftar Akun</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="register()">Daftar</button>
+    </div>
+
+    <script>
+        function register() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            if (user === "" || pass === "") {
+                alert("Username dan password wajib diisi!");
+                return;
+            }
+
+            localStorage.setItem("username", user);
+            localStorage.setItem("password", pass);
+
+            alert("Pendaftaran berhasil! Silakan login.");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+
+</html>
+// FAQ toggle
+document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const answer = btn.nextElementSibling;
+        answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+    });
+});
+
+// Mobile menu
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+        navMenu.style.display =
+            navMenu.style.display === "flex" ? "none" : "flex";
+    });
+}
+
+
+// Modal
+function openLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+function openRegister() {
+    document.getElementById("registerModal").style.display = "flex";
+}
+function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+    document.getElementById("registerModal").style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+
+function openMateri() {
+    window.open(
+        "https://docs.google.com/forms/d/e/1FAIpQLSenYmtXreOdpBF1AcWwIh1QBNbAWQPHW8Yk8eRyRyKpJ_lHlQ/viewform?usp=header",
+        "_blank"
+    );
+}
+
+function openForm() {
+    window.open(
+        "https://forms.gle/m4AUwud2YiRUCXiM8",
+        "_blank"
+    );
+}
+
+
+function openabsen() {
+    window.open(
+        "https://forms.gle/beGUK3Ko9Wg91S3c7",
+        "_blank"
+    );
+}
+
+function openWhatsApp() {
+    window.open(
+        "https://wa.me/6285185409887",
+        "_blank"
+    );
+}
+
+
+
+
+
+function toggleDropdown() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+document.addEventListener("click", function (e) {
+    const dropdown = document.querySelector(".nav-right");
+    if (dropdown && !dropdown.contains(e.target)) {
+        document.getElementById("dropdownMenu").style.display = "none";
+    }
+});
+
+
+
+
+
+
+
+document.querySelectorAll('.kelas-card').forEach(card => {
+    const link = card.querySelector('a');
+    if (link) {
+        card.addEventListener('click', () => {
+            window.location.href = link.href;
+        });
+    }
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const eliteCard = document.getElementById("eliteCard");
+    const unlockBtn = document.getElementById("unlockEliteBtn");
+
+    // Cek status unlock
+    const eliteUnlocked = localStorage.getItem("eliteUnlocked");
+
+    if (eliteUnlocked === "true") {
+        unlockEliteUI();
+    }
+
+    if (unlockBtn) {
+        unlockBtn.addEventListener("click", () => {
+            // simulasi pembayaran / form
+            window.open(
+                "https://forms.gle/m4AUwud2YiRUCXiM8",
+                "_blank"
+            );
+
+            // SIMULASI UNLOCK (nanti bisa dipindah ke setelah bayar)
+            localStorage.setItem("eliteUnlocked", "true");
+
+            unlockEliteUI();
+        });
+    }
+
+    function unlockEliteUI() {
+        eliteCard.classList.remove("locked");
+        eliteCard.classList.add("unlocked");
+
+        eliteCard.querySelector(".lock-icon").remove();
+        eliteCard.querySelector(".locked-btn").remove();
+
+        const link = document.createElement("a");
+        link.href = "materi.html";
+        link.className = "kelas-btn";
+        link.innerText = "Masuk Kelas Elite";
+
+        eliteCard.appendChild(link);
+    }
+});
+
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn-primary {
+    background: #15bce9;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: #444;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    background: #f2f8fc;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Features */
+.features-section {
+    padding: 60px 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* CTA */
+.cta-section {
+    background: #eff4ff;
+    color: #005f73;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.btn-large {
+    font-size: 20px;
+}
+
+/* Footer */
+
+
+
+
+
+
+
+
+
+
+/* Pricing */
+.pricing {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.price-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
+}
+
+.price {
+    font-size: 22px;
+    color: #005f73;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.price-card li {
+    margin: 10px 0;
+}
+
+.featured {
+    border: 2px solid #15bce9;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+
+/* FAQ */
+.faq {
+    background: #f2f8fc;
+    padding: 60px 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background: #004f73;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.faq-answer {
+    display: none;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+/* Navbar responsive */
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 25px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+
+
+css dashboard .dashboard {
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+.footer {
+    background: #0a1a3a;
+    color: #fff;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+.wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM NAVBAR (LMS PRO)
+========================= */
+
+.premium-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.premium-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.premium-logo span {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Menu Tengah */
+.nav-center {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #374151;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.nav-center a:hover {
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.nav-center a.active {
+    background: rgba(13, 110, 253, 0.15);
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* User Area */
+.nav-right {
+    position: relative;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Avatar */
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #0d6efd, #3b82f6);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.username {
+    font-size: 14px;
+    color: #111827;
+    font-weight: 500;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    display: none;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .premium-navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-center {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menu / Kartu Materi */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.menu-card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    border: 1px solid #ddd;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: #f0f6ff;
+}
+
+.menu-card h3 {
+    color: #0057ff;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 60px;
+}
+
+/* Tombol Akses Materi */
+.menu-card button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-card button:hover {
+    background: #084298;
+    transform: translateY(-3px);
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .menu-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   KELAS CARD (INDEX PAGE)
+========================= */
+
+.kelas-section {
+    padding: 80px 20px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.kelas-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 50px;
+}
+
+/* Container */
+.kelas-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.kelas-card {
+    background: white;
+    width: 300px;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.kelas-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon */
+.kelas-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.kelas-card h3 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.kelas-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    min-height: 60px;
+}
+
+/* Button */
+.kelas-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.kelas-btn:hover {
+    background: #084298;
+}
+
+/* Accent Border (Optional) */
+.kelas-card.dasar {
+    border-top: 5px solid #2563eb;
+}
+
+.kelas-card.menengah {
+    border-top: 5px solid #16a34a;
+}
+
+.kelas-card.intensif {
+    border-top: 5px solid #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .kelas-card {
+        width: 90%;
+    }
+}
+
+.kelas-btn,
+.kelas-card h3,
+.kelas-card p,
+.kelas-icon,
+.kelas-price,
+.rating,
+.progress,
+.countdown {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   KELAS CARD (glow effect)
+========================= */
+.kelas-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(13, 110, 253, 0.15));
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.kelas-card:hover::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM CLASS CARD
+========================= */
+
+.kelas-card.premium {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+/* Gradient Hover */
+.kelas-card.premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(13, 110, 253, 0.15),
+            rgba(99, 102, 241, 0.15));
+    opacity: 0;
+    transition: 0.5s;
+
+    /* 🔥 FIX KLIK */
+    pointer-events: none;
+}
+
+
+.kelas-card.premium:hover::before {
+    opacity: 1;
+}
+
+.kelas-card.premium:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.badge.basic {
+    background: #2563eb;
+}
+
+.badge.popular {
+    background: #16a34a;
+}
+
+.badge.premium-badge {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+/* Price */
+.kelas-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #0d6efd;
+}
+
+/* Locked State */
+.kelas-card.locked {
+    opacity: 0.95;
+}
+
+.lock-icon {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    font-size: 22px;
+    opacity: 0.6;
+}
+
+/* Button Locked */
+.locked-btn {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.locked-btn:hover {
+    background: linear-gradient(135deg, #d97706, #dc2626);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ELITE CLASS CARD
+========================= */
+
+.kelas-card.elite {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 22px;
+    padding: 42px 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.kelas-card.elite:hover {
+    transform: translateY(-14px) scale(1.05);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Elite Glow */
+.kelas-card.elite::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(13, 110, 253, 0.18), transparent);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.kelas-card.elite:hover::after {
+    opacity: 1;
+}
+
+/* Rating */
+.rating {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #f59e0b;
+}
+
+/* Progress */
+.progress {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0d6efd, #3b82f6);
+}
+
+/* Countdown */
+.countdown {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #dc2626;
+    font-weight: 600;
+}
+
+
+
+.kelas-card.unlocked {
+    border: 2px solid #084298;
+}
+
+.kelas-card.unlocked::after {
+    content: "✔ UNLOCKED";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #a7caff;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 700;
+}
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuqthah Online Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="premium-navbar">
+        <div class="nav-left">
+            <div class="premium-logo">
+                Nuqthah<span>Learn</span>
+            </div>
+        </div>
+
+        <nav class="nav-center">
+            <a href="index.html" class="active">Beranda</a>
+            <a href="materi.html">Materi</a>
+            <a href="#">Kelas</a>
+            <a href="#">Sertifikat</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-dropdown" onclick="toggleDropdown()">
+                <div class="avatar">N</div>
+                <span class="username">Peserta</span>
+            </div>
+
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#">Dashboard</a>
+                <a href="#">Profil</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Platform Pembelajaran Online</h1>
+            <p>Akses materi, modul, dan tugas pembelajaran secara online.</p>
+            <div class="buttons">
+                <a href="materi.html" class="btn-primary">Akses Materi</a>
+                <a href="register.html" class="btn-primary">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features-section">
+
+        <div class="container grid-3">
+            <div class="card">
+                <h3>Materi pembelajaran</h3>
+                <p>Akses modul dan file pembelajaran</p>
+            </div>
+            <div class="card">
+                <h3>Tugas & Evaluasi</h3>
+                <p>Kumpulkan tugas dan evaluasi secara online</p>
+            </div>
+           <div class="card">
+                <h3>Absensi</h3>
+                <p>Isi kehadiran melalui Google Form</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="kelas-section elite">
+        <h2 class="kelas-title">Program Kelas Elite</h2>
+
+        <div class="kelas-container">
+
+            <!-- KELAS DASAR -->
+            <div class="kelas-card elite unlocked">
+                <span class="badge elite-badge">Elite</span>
+
+                <div class="kelas-icon">📘</div>
+                <h3>Kelas Dasar</h3>
+
+                <div class="rating">⭐⭐⭐⭐☆ (4.5)</div>
+
+                <p>Materi pengantar lengkap dan latihan terstruktur.</p>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                </div>
+                <small>Progress belajar: 80%</small>
+
+                <div class="kelas-price">Rp 99.000</div>
+
+                <a href="materi.html" class="kelas-btn">Lanjutkan</a>
+            </div>
+
+            <!-- KELAS MENENGAH -->
+            <div class="kelas-card elite unlocked">
+                <span class="badge popular">Terlaris</span>
+
+                <div class="kelas-icon">📗</div>
+                <h3>Kelas Menengah</h3>
+
+                <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+
+                <p>Materi lanjutan + studi kasus.</p>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width: 45%"></div>
+                </div>
+                <small>Progress belajar: 45%</small>
+
+                <div class="kelas-price">Rp 199.000</div>
+
+                <a href="materi.html" class="kelas-btn">Lanjutkan</a>
+            </div>
+
+            <!-- KELAS INTENSIF -->
+           <div class="kelas-card elite locked" id="eliteCard">
+    <span class="badge premium-badge">Elite</span>
+
+    <div class="kelas-icon">📕</div>
+    <h3>Kelas Intensif</h3>
+
+    <div class="rating">⭐⭐⭐⭐⭐ (5.0)</div>
+    <p>Bimbingan personal + sertifikat resmi.</p>
+
+    <div class="kelas-price">Rp 399.000</div>
+
+    <button class="kelas-btn locked-btn" id="unlockEliteBtn">
+        Unlock Sekarang
+    </button>
+
+    <div class="lock-icon">🔒</div>
+</div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Apa Kata Peserta</h2>
+            <div class="grid-3">
+                <div class="testimonial-card">
+                    <p>“Materinya mudah dipahami dan sangat membantu belajar mandiri.”</p>
+                    <strong>— Syalabi, Peserta Kelas Dasar</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Penjelasan singkat, jelas, dan langsung ke inti pembahasan.”</p>
+                    <strong>— Alfian, Peserta Kelas Menengah</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>“Saya jadi lebih paham materi yang sebelumnya sulit.”</p>
+                    <strong>— Faishol, Peserta Kelas Intensif</strong>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Pertanyaan Umum</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah bisa coba gratis?</button>
+                <div class="faq-answer">Ya, gratis 30 hari tanpa kartu kredit.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah data aman?</button>
+                <div class="faq-answer">Data disimpan di server cloud dengan enkripsi.</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Bisa diakses dari HP?</button>
+                <div class="faq-answer">Bisa, responsive di semua perangkat.</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- CTA -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <h2>Mulai dengan Nuqthah Online Sekarang!</h2>
+            <a href="#" class="btn-primary btn-large">Daftar &amp; Coba Gratis</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Login</h2>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="btn-primary">Masuk</button>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Daftar Akun</h2>
+            <input type="text" placeholder="Nama">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="btn-primary">Daftar</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Nuqthah Online Learning</h3>
+                <p>Platform pembelajaran online untuk belajar mandiri dan terstruktur.</p>
+            </div>
+
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#paket">Paket Pembelajaran</a></li>
+                    <li><a href="materi.html">Materi</a></li>
+                    <li><a href="#jadwal">Jadwal Kelas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Kontak</h4>
+                <p>WhatsApp Admin</p>
+                <button onclick="openWhatsApp()" class="btn-primary">
+                    Chat Admin
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Nuqthah Learning Center. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="wa-float" onclick="openWhatsApp()">💬</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Peserta</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f6ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #0d6efd;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background: #084298;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>Login Peserta</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p class="error" id="error-msg">Username atau password salah!</p>
+    </div>
+
+    <script>
+        function login() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            const savedUser = localStorage.getItem("username");
+            const savedPass = localStorage.getItem("password");
+
+            if (user === savedUser && pass === savedPass) {
+                window.location.href = "materi.html";
+            } else {
+                alert("Username atau password salah!");
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
+/* ===== MATERI.HTML ===== */
+
+.hero {
+    background: #e6f0ff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #0d6efd;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Menu / Daftar Materi */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 20px;
+}
+
+.menu-card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    background: #f0f6ff;
+}
+
+.menu-card h3 {
+    color: #0057ff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.menu-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Tombol dalam materi */
+.menu-card button,
+.menu-card a {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-card button:hover,
+.menu-card a:hover {
+    background: #084298;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MATERI.HTML V2 ===== */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #cce0ff, #e6f0ff);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 2px solid #0d6efd33;
+}
+
+.hero h1 {
+    color: #0d6efd;
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Menu / Daftar Materi */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 60px 20px;
+}
+
+/* Kartu Materi */
+.menu-card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    border: 1px solid #ddd;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: #f0f6ff;
+}
+
+.menu-card h3 {
+    color: #0057ff;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 60px;
+}
+
+/* Tombol Materi */
+.menu-card button,
+.menu-card a {
+    margin-top: 18px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-card button:hover,
+.menu-card a:hover {
+    background: #084298;
+    transform: translateY(-3px);
+}
+
+/* Footer Halaman Materi */
+footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    background: #0a1a3a;
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid #0d6efd33;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .menu-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #cce0ff, #e6f0ff);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 2px solid #0d6efd33;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero h1 {
+    color: #0d6efd;
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Filter Kategori */
+.filter {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.filter button {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter button:hover {
+    background: #084298;
+}
+
+/* Menu / Kartu Materi */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.menu-card {
+    background: white;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    border: 1px solid #ddd;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: #f0f6ff;
+}
+
+.menu-card h3 {
+    color: #0057ff;
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 60px;
+}
+
+/* Tombol Akses Materi */
+.menu-card button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu-card button:hover {
+    background: #084298;
+    transform: translateY(-3px);
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .menu-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+   NAVBAR / HEADER
+===================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0d6efd;
+    letter-spacing: 0.5px;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background: #eaf1ff;
+    color: #0d6efd;
+}
+
+/* Active menu */
+.nav-menu a.active {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 14px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   EDU NAVBAR (LEARNING LMS)
+========================= */
+
+.edu-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.edu-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.edu-logo span {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Menu Tengah */
+.edu-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.edu-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.edu-menu a:hover {
+    color: #0d6efd;
+    background: #eaf1ff;
+}
+
+.edu-menu a.active {
+    color: #0d6efd;
+    font-weight: 600;
+    background: #eaf1ff;
+}
+
+/* Bagian Kanan (User) */
+.edu-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .edu-navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .edu-menu {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PREMIUM NAVBAR (LMS PRO)
+========================= */
+
+.premium-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.premium-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.premium-logo span {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Menu Tengah */
+.nav-center {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #374151;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.nav-center a:hover {
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.nav-center a.active {
+    background: rgba(13, 110, 253, 0.15);
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* User Area */
+.nav-right {
+    position: relative;
+}
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Avatar */
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #0d6efd, #3b82f6);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.username {
+    font-size: 14px;
+    color: #111827;
+    font-weight: 500;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    display: none;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #374151;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f3f4f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .premium-navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-center {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: #0a1a3a;
+    color: #fff;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+
+
+.wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Materi Pembelajaran</title>
+    <link rel="stylesheet" href="materi.css">
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eliteUnlocked = localStorage.getItem("eliteUnlocked");
+
+            if (eliteUnlocked !== "true") {
+                alert("Akses ditolak! Silakan unlock kelas Elite terlebih dahulu.");
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+
+    <!-- NAVBAR (SAMA SEPERTI INDEX) -->
+    <header class="premium-navbar">
+        <div class="nav-left">
+            <div class="premium-logo">
+                Nuqthah<span>Learn</span>
+            </div>
+        </div>
+
+        <nav class="nav-center">
+            <a href="index.html">Beranda</a>
+            <a href="materi.html" class="active">Materi</a>
+            <a href="#">Kelas</a>
+            <a href="#">Sertifikat</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-dropdown" onclick="toggleDropdown()">
+                <div class="avatar">N</div>
+                <span class="username">Peserta</span>
+            </div>
+
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#">Dashboard</a>
+                <a href="#">Profil</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Materi Pembelajaran Online</h1>
+        <p>Pilih materi sesuai kelas, klik untuk mengakses Google Drive atau Google Form.</p>
+    </section>
+
+    <section class="filter">
+        <button onclick="showAll()">Semua</button>
+        <button onclick="showClass('dasar')">Kelas Dasar</button>
+        <button onclick="showClass('menengah')">Kelas Menengah</button>
+        <button onclick="showClass('intensif')">Kelas Intensif</button>
+    </section>
+
+    <section class="menu">
+        <div class="menu-card dasar" onclick="openMateriDasar()">
+            <h3>📘 Kelas Dasar</h3>
+            <p>Materi pengantar & PDF</p>
+            <button>Akses Materi</button>
+        </div>
+
+        <div class="menu-card menengah" onclick="openMateriMenengah()">
+            <h3>📗 Kelas Menengah</h3>
+            <p>Materi lanjutan & tugas</p>
+            <button>Akses Materi</button>
+        </div>
+
+        <div class="menu-card intensif" onclick="openMateriIntensif()">
+            <h3>📕 Kelas Intensif</h3>
+            <p>Bimbingan & sertifikat</p>
+            <button>Akses Materi</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Nuqthah Online Learning</h3>
+                <p>Platform pembelajaran online untuk belajar mandiri dan terstruktur.</p>
+            </div>
+
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#paket">Paket Pembelajaran</a></li>
+                    <li><a href="materi.html">Materi</a></li>
+                    <li><a href="#jadwal">Jadwal Kelas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Kontak</h4>
+                <p>WhatsApp Admin</p>
+                <button onclick="openWhatsApp()" class="btn-primary">
+                    Chat Admin
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Nuqthah Learning Center. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="wa-float" onclick="openWhatsApp()">💬</div>
+
+    <script>
+        // Proteksi halaman materi
+        window.onload = function () {
+            const savedUser = localStorage.getItem("username");
+            const savedPass = localStorage.getItem("password");
+
+            if (!savedUser || !savedPass) {
+                // Kalau tidak ada akun tersimpan → redirect ke login
+                alert("Silakan login terlebih dahulu untuk mengakses materi.");
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+
+    <script src="materi.js"></script>
+</body>
+
+</html>
